@@ -9,7 +9,6 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import com.example.ezstock.ui.theme.EzStockTheme
 
 class MainActivity : ComponentActivity() {
@@ -24,10 +23,11 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+
 @Composable
 fun MainTabScreen() {
     val tabItems = listOf("Dashboard", "Inventory", "Scan", "Tracking", "Profile")
-    var selectedTabIndex by remember { mutableStateOf(0) }
+    var selectedTabIndex by remember { mutableIntStateOf(0) }
 
     Scaffold(
         bottomBar = {
